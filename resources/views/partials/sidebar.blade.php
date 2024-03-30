@@ -21,7 +21,7 @@
             <a href="/karir" class="a-icon d-none d-md-block py-2 px-3"><i class="fa-solid fa-briefcase me-3"></i>Data Karir</a>
             <a href="/karir" class="a-icon d-block d-md-none py-2 px-3"><i class="fa-solid fa-briefcase"></i></a>
         </li>
-        <li class="list-group list text-medium cursor-pointer {{ ($title == "Data Nilai") ? 'list-active' : '' }} text-center text-md-start">
+        <li class="list-group list text-medium cursor-pointer {{ ($title == "Data Nilai Siswa") ? 'list-active' : '' }} text-center text-md-start">
             <a href="/nilai" class="a-icon d-none d-md-block py-2 px-3"><i class="fa-solid fa-chart-column me-3"></i>Data Nilai</a>
             <a href="/nilai" class="a-icon d-block d-md-none py-2 px-3"><i class="fa-solid fa-chart-column"></i></a>
         </li>
@@ -35,8 +35,8 @@
         <li class="list-group list-logout text-medium cursor-pointer text-center rounded text-md-start">
             <form  action="{{ route('logout') }}" method="POST">
                 @csrf
-                <button type="submit" class="button-logout rounded a-icon d-none d-md-block py-2 px-3 rounded"><i class="fa-solid fa-right-from-bracket me-3"></i>Logout</a>
-                <button type="submit "class="button-logout rounded a-icon d-block d-md-none py-2 px-3"><i class="fa-solid fa-right-from-bracket"></i></button>
+                <button type="submit" class="button-logout a-icon d-none d-md-block py-2 px-3 rounded"><i class="fa-solid fa-right-from-bracket me-3"></i>Logout</a>
+                <button type="submit "class="button-logout rounded a-icon d-block d-md-none py-2 px-3" style="text-align: center"><i class="fa-solid fa-right-from-bracket"></i></button>
             </form>
         </li>
 

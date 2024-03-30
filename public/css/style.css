@@ -108,6 +108,15 @@
     background-color: crimson;
 }
 
+.detail {
+    text-decoration: none;
+    font-size: smaller;
+}
+
+.nilai {
+    height: 30rem;
+}
+
 @media (max-width: 576px) {
     .icon-round {
         width: 50px;

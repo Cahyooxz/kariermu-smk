@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,19 @@ Route::get('/dashboard', function () {
     ]
 );
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/nilai', function () {
+    return view('data_nilai',[
+        'title' => 'Data Nilai Siswa'
+    ]);
+}
+);
+
+// Route::get('/dashboard/detail_status', function () {
+//     return view('detail_status');
+// });
+
+Route::get('detail_status',[Controller::class, 'detailStatus'])->name('detail.status');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
