@@ -34,6 +34,12 @@ Route::get('/nilai', function () {
     ]);
 }
 );
+Route::get('/nilai/detail_nilai', function () {
+    return view('detail_data_nilai',[
+        'title' => 'Detail Data Nilai Siswa'
+    ]);
+}
+);
 
 // Route::get('/dashboard/detail_status', function () {
 //     return view('detail_status');
