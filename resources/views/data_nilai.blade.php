@@ -7,7 +7,7 @@
         <h4 class="h4">Data Nilai Siswa</h4>
       </div>
       <div class="container-fluid overflow-hidden">
-        <div class="row">
+        <div class="row d-flex justify-content-between">
           <div class="grafik_nilai col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 mb-5 mb-xl-0 ms-0 ms-lg-0 ms-xl-0 mt-5 card">
             <h4 class="mt-3 ms-3 mb-3">Grafik Rata Rata Per Semester</h4>
             <div class="p-3">

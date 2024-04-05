@@ -88,8 +88,8 @@
 }
 
 .icon-round {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
 }
 
 .list-none {
@@ -116,6 +116,11 @@
 .nilai {
     overflow: auto;
     height: 80vh;
+}
+
+.profile {
+    width: 50px;
+    height: auto;
 }
 
 @media (max-width: 576px) {
@@ -158,6 +163,18 @@
 
 @media ((min-width: 1100px) and (max-width: 1500px)) {
     .grafik_nilai {
-        height: 27rem;
+        height: 30rem;
+    }
+}
+
+@media (min-width: 2000px) {
+    .grafik_nilai {
+        height: 45rem;
+    }
+}
+
+@media (min-width: 2200px) {
+    .grafik_nilai {
+        height: 100rem;
     }
 }

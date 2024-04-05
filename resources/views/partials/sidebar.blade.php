@@ -3,16 +3,16 @@
         <img src="{{ asset('img/logo1.png') }}" alt="" width="70px" class="mt-3 mb-3 d-none d-sm-block">
         <p class="mt-1 text-light mb-3">Kariermu.</p>
     </div>
-    <ul class="p-0 d-flex flex-column gap-2 d-flex justify-content-center align-items-center">
+    <ul class="p-0 d-flex flex-column d-flex justify-content-center align-items-center gap-2">
         <li class="list-group list text-medium cursor-pointer {{ ($title == "Dashboard") ? 'list-active' : '' }} text-center text-md-start">
             {{-- paddingnya di a href --}}
             <a href="/dashboard" class="a-icon d-none d-md-block py-2 px-3"><i class="fa-solid fa-house-chimney-user me-3"></i>Dashboard</a>
             <a href="/dashboard" class="a-icon d-block d-md-none py-2 px-3 text-center"><i class="fa-solid fa-house-chimney-user"></i></a>
         </li>
-        {{-- <li class="list-group list text-medium cursor-pointer {{ ($title == "Data Guru") ? 'list-active' : '' }} text-center text-md-start">
+        <li class="list-group list text-medium cursor-pointer {{ ($title == "Data Guru") ? 'list-active' : '' }} text-center text-md-start">
             <a href="/guru" class="a-icon d-none d-md-block py-2 px-3"><i class="fa-solid fa-chalkboard-user me-3"></i>Guru</a>
             <a href="/guru" class="a-icon text-center d-block d-md-none py-2 px-3 text-center"><i class="fa-solid fa-chalkboard-user"></i></a>
-        </li> --}}
+        </li>
         <li class="list-group list text-medium cursor-pointer {{ ($title == "Data Siswa") ? 'list-active' : '' }} text-center text-md-start">
             <a href="/siswa" class="a-icon d-none d-md-block py-2 px-3"><i class="fa-solid fa-graduation-cap me-3"></i>Siswa</a>
             <a href="/siswa" class="a-icon d-block d-md-none py-2 px-3 text-center"><i class="fa-solid fa-graduation-cap"></i></a>
@@ -39,6 +39,5 @@
                 <button type="submit "class="button-logout rounded a-icon d-block d-md-none py-2 px-3" style="text-align: center"><i class="fa-solid fa-right-from-bracket"></i></button>
             </form>
         </li>
-
-    </ul>
-</div>
+    </ul> 
+</div> 

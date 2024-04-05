@@ -34,6 +34,7 @@ Route::get('/nilai', function () {
     ]);
 }
 );
+
 Route::get('/nilai/detail_nilai', function () {
     return view('detail_data_nilai',[
         'title' => 'Detail Data Nilai Siswa'
@@ -86,6 +87,14 @@ Route::get('siswa/edit',function(){
         'title' => 'Edit Data Siswa'
     ]);
 })->middleware(['auth', 'verified', 'role:penulis|admin|siswa']);
+
+// data guru
+Route::get('guru',function(){
+    return view('teacher/dataguru',
+    [
+        'title' => 'Data Guru'
+    ]);
+})->middleware(['auth', 'verified', 'role:penulis|admin|guru']);
 
 Route::get('tulisan',function(){
     return view('tulisan');

@@ -8,37 +8,63 @@
       </div>
       <div class="container-fluid mt-5">
         <div class="row">
-          <div class="col-2">
+          <div class="col">
             <div class="form-group">
               <label for="" class="mb-3">Nilai Matematika</label>
               <input type="text" name="" id="" class="form-control">
             </div>
           </div>
-          <div class="col-2">
+          <div class="col">
             <div class="form-group">
               <label for="" class="mb-3">Nilai Matematika</label>
               <input type="text" name="" id="" class="form-control">
             </div>
           </div>
-          <div class="col-2">
+          <div class="col">
             <div class="form-group">
               <label for="" class="mb-3">Nilai Matematika</label>
               <input type="text" name="" id="" class="form-control">
             </div>
           </div>
-          <div class="col-2">
+          <div class="col">
             <div class="form-group">
               <label for="" class="mb-3">Nilai Matematika</label>
               <input type="text" name="" id="" class="form-control">
             </div>
           </div>
-          <div class="col-2">
+          <div class="col">
             <div class="form-group">
               <label for="" class="mb-3">Nilai Matematika</label>
               <input type="text" name="" id="" class="form-control">
             </div>
           </div>
-          <div class="col-2">
+        </div>
+        <div class="row mt-5">
+          <div class="col">
+            <div class="form-group">
+              <label for="" class="mb-3">Nilai Matematika</label>
+              <input type="text" name="" id="" class="form-control">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="" class="mb-3">Nilai Matematika</label>
+              <input type="text" name="" id="" class="form-control">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="" class="mb-3">Nilai Matematika</label>
+              <input type="text" name="" id="" class="form-control">
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-group">
+              <label for="" class="mb-3">Nilai Matematika</label>
+              <input type="text" name="" id="" class="form-control">
+            </div>
+          </div>
+          <div class="col">
             <div class="form-group">
               <label for="" class="mb-3">Nilai Matematika</label>
               <input type="text" name="" id="" class="form-control">
