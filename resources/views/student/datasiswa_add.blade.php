@@ -52,29 +52,26 @@
           </div>
         </div>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Launch demo modal
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
+        <div class="row mb-3 d-none" id="nilaiKuliahForm">
+          <div class="col-12">
+            <label for="nilaiKuliah" class="text-secondary mb-3">Nilai Kuliah</label>
+            <input type="number" class="form-control" id="nilaiKuliah" name="nilaiKuliah" placeholder="Masukkan nilai kuliah">
           </div>
         </div>
+        <script>
+          
+          document.getElementById('statkarir').addEventListener('change', function () {
+            var selectedValue = this.value;
+            var nilaiKuliahForm = document.getElementById('nilaiKuliahForm');
+
+            // Tampilkan form input nilai kuliah jika memilih berkuliah
+            if (selectedValue === '2') { // Ubah '2' dengan nilai yang sesuai untuk opsi "Berkuliah"
+                nilaiKuliahForm.classList.remove('d-none');
+            } else {
+                nilaiKuliahForm.classList.add('d-none');
+            }
+        });
+        </script>
 
         <div class="d-flex gap-2 mt-5">
           <button type="submit" class="button py-2 px-3 rounded text-decoration-none text-center ">Submit</button>

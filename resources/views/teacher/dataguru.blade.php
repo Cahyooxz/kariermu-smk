@@ -10,7 +10,7 @@
         <div class="container-fluid px-4">
           <div class="row">
             <div class="col p-0">
-              {{-- <div class="input-group mb-3 mt-3">
+              <div class="input-group mb-3 mt-3">
                 <div class="dropdown">
                   <button class="btn dropdown-toggle ps-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">Sort by</button>
                   <ul class="dropdown-menu">
@@ -21,14 +21,13 @@
                   </ul>
                 </div>
                 <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder="Cari guru berdasarkan NIP atau Nama">
-              </div> --}}
+              </div>
               <div class="card mt-3" style="height: 43rem">
                 <div class="card-body table-responsive">
-                  {{-- @empty --}}
                   {{-- empty --}}
-                  <div class="d-flex flex-column gap-2 position-absolute text-center" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                    <h3 class="text-danger fw-bold">Data Guru Tidak Ada</h3>
-                    <h5 class="text-secondary">Segera Isi Data Guru</h5>
+                  <div class="d-flex flex-column text-center d-flex justify-content-center align-items-center text-secondary h-100">
+                    <h3 class="fw-medium">Data Guru Tidak Ada</h3>
+                    <h5 class="">Segera Isi Tambah Guru</h5>
                   </div>
                   {{-- @endempty --}}
 
@@ -102,6 +101,7 @@
                       </tbody>
                     </table>
                   </div>
+                  {{-- gak ada --}}
                 </div>
               </div>
             </div>

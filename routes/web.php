@@ -16,35 +16,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 // route laravel breezer
-Route::get('/', function () {
-    return view('index',[
-        'title' => 'Login'
-    ]);
-});
-Route::get('/dashboard', function () {
-    return view('dashboard',[
-        'title' => 'Dashboard'
-    ]
-);
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/',[Controller::class,'index']);
+Route::get('/dashboard',[Controller::class,'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/nilai', function () {
-    return view('data_nilai',[
-        'title' => 'Data Nilai Siswa'
-    ]);
-}
-);
-
-Route::get('/nilai/detail_nilai', function () {
-    return view('detail_data_nilai',[
-        'title' => 'Detail Data Nilai Siswa'
-    ]);
-}
-);
-
-// Route::get('/dashboard/detail_status', function () {
-//     return view('detail_status');
-// });
+// nilai
+Route::get('/nilai',[Controller::class,'dataNilai']);
+Route::get('/nilai/detail_nilai',[Controller::class,'detailDataNilai']);
 
 Route::get('detail_status',[Controller::class, 'detailStatus'])->name('detail.status');
 
@@ -57,47 +34,23 @@ Route::middleware('auth')->group(function () {
 
 
 //routing dan memberi izin kepada role
-Route::get('admin',function(){
-    return view('dashboard', [
-        'title' => 'Dashboard'
-    ]);
-})->middleware(['auth', 'verified', 'role:admin']);
+Route::get('admin',[Controller::class,'dashboardAdmin'])->middleware(['auth', 'verified', 'role:admin']);
 
-Route::get('penulis',function(){
-    return view('tulisan');
-})->middleware(['auth', 'verified', 'role:penulis|admin']);
 
-Route::get('siswa',function(){
-    return view('student/datasiswa',
-    [
-        'title' => 'Data Siswa'
-    ]);
-})->middleware(['auth', 'verified', 'role:penulis|admin|siswa']);
+Route::get('siswa',[Controller::class,'dataSiswa'])->middleware(['auth', 'verified', 'role:penulis|admin|siswa']);
+Route::get('siswa/tambah',[Controller::class,'addDataSiswa'])->middleware(['auth', 'verified', 'role:admin|siswa']);
 
-Route::get('siswa/tambah',function(){
-    return view('student/datasiswa_add',
-    [
-        'title' => 'Tambah Data Siswa'
-    ]);
-})->middleware(['auth', 'verified', 'role:penulis|admin|siswa']);
-
-Route::get('siswa/edit',function(){
-    return view('student/datasiswa_update',
-    [
-        'title' => 'Edit Data Siswa'
-    ]);
-})->middleware(['auth', 'verified', 'role:penulis|admin|siswa']);
+Route::get('siswa/edit',[Controller::class,'editDataSiswa'])->middleware(['auth', 'verified', 'role:penulis|admin|siswa']);
 
 // data guru
-Route::get('guru',function(){
-    return view('teacher/dataguru',
-    [
-        'title' => 'Data Guru'
-    ]);
-})->middleware(['auth', 'verified', 'role:penulis|admin|guru']);
+Route::get('guru',[Controller::class,'dataGuru'])->middleware(['auth', 'verified', 'role:penulis|admin|guru']);
+
 
 Route::get('tulisan',function(){
     return view('tulisan');
 })->middleware(['auth', 'verified', 'role_or_permission:lihat-tulisan|admin']);
 
+Route::get('penulis',function(){
+    return view('tulisan');
+})->middleware(['auth', 'verified', 'role:penulis|admin']);
 require __DIR__.'/auth.php';
